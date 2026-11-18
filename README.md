@@ -23,37 +23,6 @@ Ya buat ngetrack film yang ditonton, apa lagi
    - `Title_Genre` (Many-to-Many Title & Genre)
    - `User_watchlist` (Relasi user & title beserta status, rating, notes, finished_date)
 
-## Struktur Folder Project
-Movie Tracker/
-├── index.php                      # Dashboard utama (Gallery View, Tabs, Filter, Modal)
-├── config/
-│   └── database.php               # Konfigurasi PDO MySQL & helper koneksi
-├── database/
-│   ├── schema.sql                 # DDL (5 tabel relasional) & DML (sample data lengkap)
-│   └── setup.php                  # Script installer & migrasi database sekali klik
-├── includes/
-│   ├── auth_check.php             # Middleware pengecekan session user
-│   ├── functions.php              # Helper fungsi (Notion badge pastel, bintang, sanitizer)
-│   ├── header.php                 # Header & Navbar minimalis Notion
-│   └── footer.php                 # Footer & skrip penutup
-├── auth/
-│   ├── login.php                  # Halaman Login Notion-style
-│   ├── register.php               # Halaman Pendaftaran akun baru (dengan Secret PIN)
-│   ├── forgot_password.php        # Halaman Reset Password dengan Secret PIN / Master Key
-│   └── logout.php                 # Logout session handler
-├── actions/
-│   ├── add_movie.php              # Handler Create (tambah film baru)
-│   ├── edit_movie.php             # Handler Update (edit film & watchlist)
-│   ├── delete_movie.php           # Handler Delete (hapus film dari watchlist)
-│   └── get_movie.php              # Endpoint API JSON untuk data modal detail
-├── assets/
-│   ├── css/
-│   │   └── style.css              # Styling lengkap bertema Notion
-│   ├── js/
-│   │   └── app.js                 # Logika interaktif modal, filter, sort, dan rating
-│   └── uploads/                   # Direktori penyimpanan poster hasil upload
-└── README.md                      # Dokumentasi 
-
 ## Skema Database (MySQL)
 
 Aplikasi menggunakan 5 tabel relasional:
