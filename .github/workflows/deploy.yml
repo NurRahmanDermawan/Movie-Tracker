@@ -1,0 +1,22 @@
+name: CI/CD Auto Pull and Rebuild
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout kode
+        uses: actions/checkout@v4
+
+      - name: Build dan jalankan container
+        env:
+          DB_ROOT_PASSWORD: ${{ secrets.DB_ROOT_PASSWORD }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: docker compose up -d --build
+
+      - name: Cek status container
+        run: docker compose ps
