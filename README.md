@@ -1,6 +1,6 @@
 🎬 Movie Tracker 
 
-Ya buat ngetrack film yang ditonton, apa lagi
+Ya buat ngetrack film yang ditonton, apa lagi kocak
 
 ## Fitur Utama
 
